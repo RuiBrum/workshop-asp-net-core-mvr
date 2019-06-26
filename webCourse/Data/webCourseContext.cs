@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace webCourse.Models
 {
-    public class webCourseContext : DbContext
+    public class WebCourseContext : DbContext
     {
-        public webCourseContext (DbContextOptions<webCourseContext> options)
+        public WebCourseContext (DbContextOptions<WebCourseContext> options)
             : base(options)
         {
         }

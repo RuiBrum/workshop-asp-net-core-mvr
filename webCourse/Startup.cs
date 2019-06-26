@@ -31,8 +31,8 @@ namespace webCourse {
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-    services.AddDbContext<webCourseContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("webCourseContext")));
+            services.AddEntityFrameworkNpgsql().AddDbContext<WebCourseContext>(options =>
+            options.UseNpgsql(Configuration.GetConnectionString("webCourseContext"), builder => builder.MigrationsAssembly("webCourse")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

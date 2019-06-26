@@ -11,9 +11,9 @@ namespace webCourse.Controllers
 {
     public class DepartmentsController : Controller
     {
-        private readonly webCourseContext _context;
+        private readonly WebCourseContext _context;
 
-        public DepartmentsController(webCourseContext context)
+        public DepartmentsController(WebCourseContext context)
         {
             _context = context;
         }
