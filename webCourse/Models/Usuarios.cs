@@ -11,6 +11,7 @@ namespace webCourse.Models
    [Key]
    [Display(Name="Id")]
    public int id { get; set; }
+   [Required]
    [StringLength(1)]
    [Display(Name="Id_Tabelionato")]
    public string id_tabelionato { get; set; }
@@ -25,6 +26,7 @@ namespace webCourse.Models
    [Display(Name="Status")]
    public string status { get; set; }
    [StringLength(5)]
+   [MinLength(5)]
    [Display(Name="Aniversario")]
    public string aniversario { get; set; }
  }

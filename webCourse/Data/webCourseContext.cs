@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using webCourse.Models;
 
 namespace webCourse.Models
 {
@@ -12,7 +13,16 @@ namespace webCourse.Models
             : base(options)
         {
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Usuarios>().Property(b => b.id_tabelionato).HasDefaultValue(1);
+            modelBuilder.Entity<Usuarios>().HasIndex(b => b.login).HasName("Ix_UsuarioLogin");
+        }
 
-        public DbSet<webCourse.Models.Department> Department { get; set; }
+        public DbSet<Department> Department { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
+        public DbSet<SalesRecord> SalesRecords { get; set; }
+        public DbSet<Seller> Seller { get; set; }
+
     }
 }
