@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using webCourse.Models;
+using webCourse.Models.ViewModels;
 
 namespace webCourse.Controllers {
     public class HomeController : Controller {
